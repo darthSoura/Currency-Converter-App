@@ -117,7 +117,7 @@ expander_bar.markdown("""
 with st.spinner("Calculating..."):
     df = load_data()
     st.header('Currency conversion')
-    st.dataframe(df, width = 1000)
+    st.dataframe(df, width = 100000)
     st.write(base_price_unit, " - ", currencies[base_price_unit])
     st.write(symbols_price_unit, " - ", currencies[symbols_price_unit])
     
