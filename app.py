@@ -115,7 +115,7 @@ def load_data():
 expander_bar = st.expander("About")
 expander_bar.markdown("""
 * **Python libraries:** streamlit, pandas, requests
-* **API details:** [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api#documentation-tab) 
+* **API details:** [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api) 
 """)
 
 with st.spinner("Calculating..."):
