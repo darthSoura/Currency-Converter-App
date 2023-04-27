@@ -93,7 +93,10 @@ def load_data():
     url = f"https://api.apilayer.com/exchangerates_data/latest?base={base_price_unit}&symbols={symbols_price_unit}"
     response = requests.request("GET", url, headers=headers) 
     result = response.json()
-          
+    if "success" not in result.keys():
+        st.info("Sorry to say, but the API Use Limit has been exceeded.")
+        exit()
+    
     # create the Dataframe
     from_cur = pd.Series([base_price_unit], name = "From")
     to_cur = pd.Series([symbols_price_unit], name = "To")
